@@ -1,0 +1,22 @@
+<p>employee works!</p>
+<div>
+    <form class ="example-form">
+        <label>¿Cuál es el nombre del empleado?</label>&nbsp;&nbsp;
+        <input matInput type="text" placeholder="ingrese su nombre" (keyup)="valorEmpleado($event)">
+    </form>
+    <br/><br/>
+    <form class ="example-form">
+        <label>¿Cuál es el nombre del Jefe?. Si no tiene puede dejar el espacio en blanco</label> &nbsp;&nbsp; 
+        <input matInput type="text" placeholder="ingrese nombre del Jefe" (keyup)="valorJefe($event)">
+
+    </form><br/><br/>
+    <button type="submit"  (click)= "createEmployee()" mat-raised-button >Guardar</button>
+
+    <h2>{{mensaje}}</h2>
+    
+    
+
+
+
+</div>
+
