@@ -8,7 +8,7 @@ var api = express.Router();
 api.get('/probando-controlador', EmployeeController.Pruebas);
 api.get('/obtener-empleados', EmployeeController.GetEmployees);
 api.post('/crear-empleado', EmployeeController.CreateEmployee);
-api.post('/crear-boss', bossController.CreateBoss);
+api.post('/crear-jefes', bossController.CreateBoss);
 api.get('/obtener-jefes', bossController.GetBoss);
 //api.post('/login', EmployeeController.loginUser);
 

@@ -11,6 +11,7 @@ function Pruebas(req,res){
 }
 
 function CreateEmployee(req, res){
+	//console.log(req);
 	var params = req.body;
 	var user = new Employee(params.fullName, params.functions );
 	if(!(params.boss)){
