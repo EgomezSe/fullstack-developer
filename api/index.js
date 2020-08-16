@@ -3,8 +3,6 @@ var app = require('./app');
 
 var port = process.env.PORT || 3977;
 
-
-
 const conection = mysql.createConnection({
     host:"localhost",
     user:"root",
