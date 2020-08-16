@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { MatInputModule, MatCardModule } from '@angular/material';
+import { MatInputModule, MatCardModule, MatTableModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -16,7 +16,8 @@ import { EmployeeComponent } from './employee/employee.component';
     AppRoutingModule,
     HttpClientModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
     
   ],
   providers: [],

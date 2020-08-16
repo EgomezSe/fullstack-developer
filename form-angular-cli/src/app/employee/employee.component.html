@@ -1,21 +1,36 @@
-<p>employee works!</p>
-<div>
+<div class="div">
+    <mat-card>
     <form class ="example-form">
-        <label>¿Cuál es el nombre del empleado?</label>&nbsp;&nbsp;
+        <label>¿Cuál es el nombre del empleado?</label>&nbsp;&nbsp;<br/><br/>
         <input matInput type="text" placeholder="ingrese su nombre" (keyup)="valorEmpleado($event)">
     </form>
     <br/><br/>
     <form class ="example-form">
-        <label>¿Cuál es el nombre del Jefe?. Si no tiene puede dejar el espacio en blanco</label> &nbsp;&nbsp; 
+        <label>¿Cuál es el nombre del Jefe?. Si no tiene puede dejar el espacio en blanco</label> &nbsp;&nbsp; <br/><br/>
         <input matInput type="text" placeholder="ingrese nombre del Jefe" (keyup)="valorJefe($event)">
 
     </form><br/><br/>
-    <button type="submit"  (click)= "createEmployee()" mat-raised-button >Guardar</button>
+    <button type="submit"  (click)= "createEmployee()" mat-raised-button  class="button ">Guardar</button>
 
     <h2>{{mensaje}}</h2>
-    
-    
+  <br/><br/>
+  <div class="divTable">
+  <h1>Empleados Registrados</h1>
+    <table mat-table [dataSource]="totalesEmployees.result" class="mat-elevation-z8" >
 
+        <ng-container matColumnDef="nombre_empleado">
+            <th mat-header-cell *matHeaderCellDef>Nombre Empleado</th>
+            <td mat-cell *matCellDef="let element">{{element.name_employee}}</td>
+        </ng-container>
+        <ng-container matColumnDef="nombre_jefe">
+            <th mat-header-cell *matHeaderCellDef>Nombre Jefe</th>
+            <td mat-cell *matCellDef="let element">{{element.name_boss}}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+    </table>
+  </div>
+</mat-card>
 
 
 </div>

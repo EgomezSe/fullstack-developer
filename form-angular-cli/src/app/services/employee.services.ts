@@ -8,16 +8,15 @@ import { Observable } from 'rxjs/observable';
     providedIn: 'root'
   })
 export class EmployeeService {
-  public uri = 'http://localhost:3977';
   constructor(private _http: HttpClient) {
   }
 
   async getEmployees() {
-      let headers = new Headers({'Content-Type':'application/json'});
+      
       return this._http.get(`/api/obtener-empleados/`).toPromise();
   }
-createEmployee(respuesta) {
-    let headers = new Headers({'Content-Type':'application/json'});
-      return this._http.post<any>(`/api/crear-empleado/`, respuesta);
+ public createEmployee(respuesta) {
+    
+      return this._http.post<any>(`/api/crear-empleado`, respuesta);
   }
 }
